@@ -72,5 +72,8 @@
   }
   body {
     @apply bg-background text-foreground;
+
+    /*ADDED TO PREVENT FIXED NAVBAR OVERLAPPING CONTENT*/
+    padding-top: 4.5rem/* 24px */;
   }
 }
