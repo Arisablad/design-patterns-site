@@ -27,6 +27,7 @@ const code = `
 function Observer() {
 
     const stackBlitzBaseUrl = import.meta.env.VITE_STACKBLITZ_OBSERVER
+    console.log(stackBlitzBaseUrl)
 
 
     return (
