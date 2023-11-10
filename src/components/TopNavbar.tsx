@@ -8,7 +8,7 @@ function TopNavbar() {
     const [expandMenu, setExpandMenu] = useState(false)
     return (
         <>
-            <div className={"fixed top-0 w-full left-0 gradient-background shadow shadow-md py-6 px-4 flex justify-between"}>
+            <div className={"fixed top-0 w-full left-0 gradient-background shadow shadow-md py-6 px-4 flex justify-between z-50"}>
                 <Link to={"/"} className={"text-2xl text-blue-500 font-semibold font-mono"}>Arisablad Patterns</Link>
                 <MenuIcon className={"md:hidden cursor-pointer"} onClick={() => {
                     setExpandMenu(!expandMenu)
@@ -16,7 +16,7 @@ function TopNavbar() {
             </div>
             {/*LINKS*/}
             {expandMenu &&
-                <div className={"bg-gray-800/20 shadow shadow-xl shadow-inner max-h-max md:hidden transition-all duration-[3000] ease-in-out py-4"}>
+                <div className={"bg-gray-800/20 shadow shadow-xl shadow-inner max-h-max md:hidden transition-all duration-[3000] ease-in-out pt-12"}>
                     {Links.map((section) => {
                         return (
                             <div className={"flex flex-col gap-2 px-1 py-1.5"}>
