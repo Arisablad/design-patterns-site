@@ -13,7 +13,7 @@ function Layout({children}: { children?: React.ReactNode }) {
                 <Sidebar/>
                 {children}
             </div>
-            <div className={"flex items-center justify-center"}>Coded By Arisablad</div>
+            <div className={"flex items-center justify-center font-bold py-4 bg-blue-950 text-white/80"}>Coded By Arisablad</div>
 
         </>
     );
