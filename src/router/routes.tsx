@@ -1,8 +1,8 @@
 import {createBrowserRouter} from "react-router-dom";
 import ErrorBoundary from "@/utils/ErrorBoundary.tsx";
 import HomePage from "@/pages/HomePage.tsx";
-import Singleton from "@/pages/Singleton.tsx";
 import Observer from "@/pages/Observer.tsx";
+import CommandPattern from "@/pages/CommandPattern.tsx";
 
 const routes = createBrowserRouter([
     {
@@ -13,8 +13,8 @@ const routes = createBrowserRouter([
         errorElement: <ErrorBoundary />,
     },
     {
-        path: "/singleton",
-        element: <Singleton />,
+        path: "/command-pattern",
+        element: <CommandPattern />,
     },
     {
         path: "/observer",
