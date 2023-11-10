@@ -1,7 +1,6 @@
 import MainLayout from "@/containers/MainLayout.tsx";
 import CodeEditor from "@/components/CodeEditor.tsx";
 
-
 const code = `
     class Observable{
     constructor(){
@@ -26,6 +25,10 @@ const code = `
 `;
 
 function Observer() {
+
+    const stackBlitzBaseUrl = import.meta.env.VITE_STACKBLITZ_OBSERVER
+
+
     return (
         <MainLayout>
         <div className={"w-full text-[rgb(193,193,193)] px-2"}>
@@ -51,7 +54,7 @@ function Observer() {
             </div>
 
 
-            <div className={"py-20"}>
+            <div className={"border-b border-gray-400 py-20\""}>
                 <span>Let's create an observable. Easy way is by creating ES6 class feature</span>
                     <div className={"p-4"}>
                     <CodeEditor code={code}/>
@@ -59,7 +62,17 @@ function Observer() {
             </div>
 
 
-
+            <div className={"py-20"}>
+                <div className={"mb-4"}>Here's simple example how we can use observer pattern to notify all counters about change</div>
+            <iframe
+                width="100%"
+                height="600px"
+                src={stackBlitzBaseUrl}
+                allowFullScreen = {true}
+                allow="fullscreen; encrypted-media"
+                title="Embedded StackBlitz Project"
+            ></iframe>
+            </div>
 
         </div>
         </MainLayout>
