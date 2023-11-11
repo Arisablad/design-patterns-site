@@ -4,6 +4,7 @@ import {CopyIcon} from "lucide-react";
 import CodeEditor from "@/components/CodeEditor.tsx";
 import {useToast} from "@/components/ui/use-toast.ts";
 import StackBlitzCode from "@/components/StackBlitzCode.tsx";
+import AiPrompt from "@/components/AiPrompt.tsx";
 
 
 const code = `
@@ -152,6 +153,11 @@ function CommandPattern() {
                     {/*<StackBlitzCode stackBlitzBaseUrl={stackBlitzBaseUrl} title={"Observer Pattern"}/>*/}
                 </div>
 
+
+                <div className={"py-20 flex items-center gap-4 flex-col w-full px-4"}>
+                    <p className={"text-2xl font-bold"}>Do you have more questions?</p>
+                    <AiPrompt pattern={"Command"}/>
+                </div>
 
 
             </div>
