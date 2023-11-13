@@ -1,4 +1,4 @@
-import {CommandIcon, SearchCodeIcon} from "lucide-react";
+import {CommandIcon, FunctionSquare, Inspect, SearchCodeIcon} from "lucide-react";
 
 export const Links = [
     {
@@ -13,6 +13,16 @@ export const Links = [
                 patern_name:"Command-Pattern",
                 href: "/command-pattern",
                 icon:<CommandIcon/>,
+            },
+            {
+                patern_name:"Singleton",
+                href: "/singleton",
+                icon:<Inspect/>,
+            },
+            {
+                patern_name:"Factory-Functions",
+                href: "/factory-functions",
+                icon:<FunctionSquare/>,
             }
         ]
     },

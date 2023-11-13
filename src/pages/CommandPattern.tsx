@@ -3,8 +3,8 @@ import {Button} from "@/components/ui/button.tsx";
 import {CopyIcon} from "lucide-react";
 import CodeEditor from "@/components/CodeEditor.tsx";
 import {useToast} from "@/components/ui/use-toast.ts";
-import StackBlitzCode from "@/components/StackBlitzCode.tsx";
 import AiPrompt from "@/components/AiPrompt.tsx";
+import StackBlitzCode from "@/components/StackBlitzCode.tsx";
 
 
 const code = `
@@ -85,7 +85,7 @@ console.log("Value after undo add command", addValue.undo(newValue))
 
 
 function CommandPattern() {
-
+    const stackBlitzBaseUrl = import.meta.env.VITE_STACKBLITZ_COMMAND
     const {toast} = useToast()
 
     return (
@@ -147,10 +147,26 @@ function CommandPattern() {
 
 
                 <div className={"py-20"}>
-                    <div className={"mb-4"}>Here's simple example how we can use observer pattern to notify all counters
-                        about changes
+                    <div className={"mb-4"}>This example needs some validation, but shows main idea behind Command Pattern.
                     </div>
-                    {/*<StackBlitzCode stackBlitzBaseUrl={stackBlitzBaseUrl} title={"Observer Pattern"}/>*/}
+                    <StackBlitzCode stackBlitzBaseUrl={stackBlitzBaseUrl} title={"Command Pattern"}/>
+                </div>
+
+
+                <div className={"py-20 border-b border-gray-400 grid grid-cols-2 text-center"}>
+                    <div>
+                        <p className={"text-green-600 font-bold text-2xl"}>Pros</p>
+                        <ul>
+                            <li>- Allows to decouple methods from object that executes operation</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p className={"text-red-600 font-bold text-2xl"}>Cons</p>
+                        <ul>
+                            <li>- Often adds unnecessary boilerplate code to an application
+                            </li>
+                        </ul>
+                    </div>
                 </div>
 
 
